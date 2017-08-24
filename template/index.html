@@ -9,8 +9,13 @@
 </head>
 
 <body>
-    <h1>Create Event</h1>
-    <p>je m'apelle {{ name }} et voici mon message: {{ content }}</p>
+    <form method="GET">
+        <label for="name">Username</label>
+        <input type="text" id="name" name="name" placeholder="pseudo">
+        <label for="content">Message</label>
+        <input type="text" id="content" name="content" placeholder="Entrez un message">
+        <button id="btn">Send</button>
+    </form>
     <script src="./public/script.js"></script>
 </body>
 
