@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/ABSylvain/nodeMeetup#readme",
   "dependencies": {
+    "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "mustache": "^2.3.0"
   }

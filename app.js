@@ -2,13 +2,21 @@ let express = require('express');
 let app = express();
 let mustache = require('mustache');
 let fs = require('fs');
+let bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
 let tabEvent = [{
     name: "test",
     content: "ceci est un test"
 }];
-app.use(express.static("public"));
-app.get("/event", function(req, res) {
-
+app.use("/", express.static("public"));
+app.post("/event", function(req, res) {
+    console.log(req.body);
+    res.send(req.body);
 });
 app.get("/test", function(req, res) {
     res.render("index", {
