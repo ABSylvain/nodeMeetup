@@ -37,10 +37,16 @@ app.get("/", function(req, res) {
 });
 
 // ####### Djaafar #######
-app.post("/user/add/", function(req, res) {
+
+//Crée un chemin
+app.post("/user/add", function(req, res) {
     console.log(req.body);
     res.send(req.body);
-    //test
+});
+
+//Charge adduser a ce chemin
+app.get("/user/add", function(req, res) {
+    res.render("adduser");
 });
 // ####### Djaafar #######
 
