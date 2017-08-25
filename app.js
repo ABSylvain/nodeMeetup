@@ -4,6 +4,8 @@ let mustache = require('mustache');
 let fs = require('fs');
 let bodyParser = require('body-parser');
 let tabArt = [];
+let tabuser = [];
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
@@ -41,17 +43,15 @@ app.get("/", function(req, res) {
 //Create a path
 app.post("/user/add", function(req, res) {
     console.log(req.body);
+    //add tab value of form client.
+    tabuser.push(req.body);
+    console.log(tabuser);
     res.send(req.body);
 });
 
 //load file adduser on the path.
-app.get("/user/add", function(req, res) {
+app.get("/adduser", function(req, res) {
     res.render("adduser");
-    //add tab value of form client.
-    let tabUser = [{
-        username: String,
-        password: String
-    }];
 });
 // ####### Djaafar #######
 
