@@ -47,6 +47,11 @@ app.post("/user/add", function(req, res) {
 //Charge adduser a ce chemin
 app.get("/user/add", function(req, res) {
     res.render("adduser");
+
+    let tabUser = [{
+        username: String,
+        password: String
+    }];
 });
 // ####### Djaafar #######
 
