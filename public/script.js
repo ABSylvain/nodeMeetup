@@ -1,10 +1,10 @@
-let name = document.querySelector("#name");
+let title = document.querySelector("#title");
 let content = document.querySelector('#content');
 let btn = document.querySelector('#btn');
 let art = document.querySelector('#art');
 
 btn.addEventListener("click", function(e) {
-    let jsonData = JSON.stringify({ name: name.value, content: content.value });
+    let jsonData = JSON.stringify({ title: title.value, content: content.value });
     e.preventDefault();
     fetch("/event", {
         method: "POST",
@@ -17,7 +17,7 @@ btn.addEventListener("click", function(e) {
     }).catch(function(error) {
         console.error(error);
     });
-    name.value = "";
+    title.value = "";
     content.value = "";
     document.querySelector("#formcont").style.display = "none";
 
@@ -37,7 +37,7 @@ function aff(obj) {
     btn.className = "col-1 btn btn-outline-danger btn-sm";
     hr.className = "col-4 text-center";
 
-    h2.textContent = obj.name;
+    h2.textContent = obj.title;
     p.textContent = obj.content;
     btn.textContent = "X";
 
@@ -72,7 +72,7 @@ document.querySelector("#newevent").addEventListener("click", function(e) {
     document.querySelector("#formcont").addEventListener("click", function() {
         if (overForm === false) {
             document.querySelector("#formcont").style.display = "none";
-            name.value = "";
+            title.value = "";
             content.value = "";
         }
     });
