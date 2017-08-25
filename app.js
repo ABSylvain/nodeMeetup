@@ -29,11 +29,10 @@ app.get("/index", function(req, res) {
 });
 
 // ####### Djaafar #######
-app.post("/user/add", function(req, res) {
+app.post("/user/add/", function(req, res) {
     console.log(req.body);
     res.send(req.body);
 });
-
 // ####### Djaafar #######
 
 app.engine("html", function(path, options, callback) {
