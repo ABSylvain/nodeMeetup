@@ -17,6 +17,10 @@ btn.addEventListener("click", function(e) {
     }).catch(function(error) {
         console.error(error);
     });
+    name.value = "";
+    content.value = "";
+    document.querySelector("#formcont").style.display = "none";
+
 });
 
 function aff(obj) {
@@ -24,17 +28,52 @@ function aff(obj) {
     let h2 = document.createElement('h2');
     let p = document.createElement('p');
     let btn = document.createElement('button');
+    let div = document.createElement('div');
+    let hr = document.createElement('hr');
+
+    article.className = "container margb";
+    div.className = "row";
+    h2.className = "col-11";
+    btn.className = "col-1 btn btn-outline-danger btn-sm";
+    hr.className = "col-4 text-center";
 
     h2.textContent = obj.name;
     p.textContent = obj.content;
-    btn.textContent = "Delete";
+    btn.textContent = "X";
 
     btn.addEventListener("click", function() {
         article.remove();
     })
 
-    article.appendChild(h2);
+    div.appendChild(h2);
+    div.appendChild(btn);
+    article.appendChild(div);
+    article.appendChild(hr);
     article.appendChild(p);
-    article.appendChild(btn);
     art.appendChild(article);
 }
+
+document.querySelector("#newevent").addEventListener("click", function(e) {
+    e.preventDefault();
+    let form = document.querySelector("#eventForm");
+    document.querySelector("#formcont").style.display = "flex";
+    let overForm = false;
+    form.addEventListener("mouseover", function() {
+        overForm = true;
+    });
+
+    form.addEventListener("mousemove", function() {
+        overForm = true;
+    });
+
+    form.addEventListener("mouseout", function() {
+        overForm = false;
+    });
+    document.querySelector("#formcont").addEventListener("click", function() {
+        if (overForm === false) {
+            document.querySelector("#formcont").style.display = "none";
+            name.value = "";
+            content.value = "";
+        }
+    });
+});
