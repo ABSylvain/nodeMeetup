@@ -1,10 +1,10 @@
-let name = document.querySelector("#name");
+let title = document.querySelector("#title");
 let content = document.querySelector('#content');
 let btn = document.querySelector('#btn');
 let art = document.querySelector('#art');
 
 btn.addEventListener("click", function(e) {
-    let jsonData = JSON.stringify({ name: name.value, content: content.value });
+    let jsonData = JSON.stringify({ title: title.value, content: content.value });
     e.preventDefault();
     fetch("/event", {
         method: "POST",
