@@ -19,10 +19,7 @@ app.post("/event", function(req, res) {
     console.log(req.body);
     res.send(req.body);
 });
-app.post("/user/add", function(req, res) {
 
-    res.send('ok');
-});
 app.post("/event/add", function(req, res) {
     let obj = {};
     obj.title = req.body.title;
