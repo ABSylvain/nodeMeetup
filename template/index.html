@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nouvel Event</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="../public/style.css">
 </head>
 
 <body>
     <form method="POST">
-        <label for="name">Username</label>
-        <input type="text" id="name" name="name" placeholder="pseudo">
-        <label for="content">Message</label>
-        <input type="text" id="content" name="content" placeholder="Entrez un message">
-        <button id="btn">Send</button>
+        <div class="form-group">
+            <label for="name" class=" col-2 offset-5 text-center">Username</label>
+            <input type="text" class="form-control col-4 mx-auto" id="name" name="name" placeholder="pseudo">
+            <label for="content" class="col-2 offset-5 text-center">Message</label>
+            <textarea id="content" class="form-control col-4 mx-auto" rows="7" name="content" placeholder="Entrez un message"></textarea>
+            <input type="submit" class="btn btn-primary col-2 offset-5" id="btn" value="Submit">
+        </div>
     </form>
+    <hr>
     <div id="art"></div>
     <script src="/script.js"></script>
 </body>
