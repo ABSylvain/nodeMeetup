@@ -1,7 +1,33 @@
+#formcont {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 1;
+}
+
+#eventForm {
+    margin: auto;
+    color: white;
+    border: 1px solid white;
+}
+
 #name {
     margin-bottom: 2%;
 }
 
 #content {
+    margin-bottom: 2%;
+}
+
+.margb {
+    background-color: rgba(61, 56, 56, 0.10);
+    margin-bottom: 4%;
+    padding-bottom: 0.7%;
+}
+
+#art>h1 {
     margin-bottom: 2%;
 }

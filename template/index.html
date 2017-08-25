@@ -7,21 +7,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nouvel Event</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="../public/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <form method="POST">
-        <div class="form-group">
-            <label for="name" class=" col-2 offset-5 text-center">Username</label>
-            <input type="text" class="form-control col-4 mx-auto" id="name" name="name" placeholder="pseudo">
-            <label for="content" class="col-2 offset-5 text-center">Message</label>
-            <textarea id="content" class="form-control col-4 mx-auto" rows="7" name="content" placeholder="Entrez un message"></textarea>
-            <input type="submit" class="btn btn-primary col-2 offset-5" id="btn" value="Submit">
+    <header class="container">
+        <div class="row">
+            <h3 class="col-6">Welcome {*{user}}</h3>
+            <button id="newevent" class="btn btn-outline-info col-2 offset-4">Add an event</button>
         </div>
-    </form>
-    <hr>
-    <div id="art"></div>
+    </header>
+    <div id="formcont">
+        <form class="container" id="eventForm" method="POST">
+            <div class="form-group">
+                <h2 class="form-heading col-6 offset-3 text-center">Create an event</h2>
+                <label for="name" class=" col-2 offset-5 text-center">Title</label>
+                <input type="text" class="form-control col-4 mx-auto" id="name" name="name" placeholder="Example">
+                <label for="content" class="col-2 offset-5 text-center">Message</label>
+                <textarea id="content" class="form-control col-4 mx-auto" rows="7" name="content" placeholder="Enter a message"></textarea>
+                <input type="submit" class="btn btn-primary col-2 offset-5" id="btn" value="Submit">
+            </div>
+        </form>
+    </div>
+    <div id="art">
+        <h1 class="text-center">Events List</h1>
+    </div>
     <script src="/script.js"></script>
 </body>
 
