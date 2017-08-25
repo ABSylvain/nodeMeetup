@@ -29,8 +29,12 @@ function aff(obj) {
     p.textContent = obj.content;
     btn.textContent = "Delete";
 
-    h2.appendChild(article);
-    p.appendChild(article);
-    btn.appendChild(article);
-    article.appendChild(art);
+    btn.addEventListener("click", function() {
+        article.remove();
+    })
+
+    article.appendChild(h2);
+    article.appendChild(p);
+    article.appendChild(btn);
+    art.appendChild(article);
 }
