@@ -13,17 +13,29 @@ let tabEvent = [{
     name: "test",
     content: "ceci est un test"
 }];
+
 app.use("/", express.static("public"));
-app.post("/event", function(req, res) {
+
+app.post("/event/add", function(req, res) {
     console.log(req.body);
     res.send(req.body);
 });
+
 app.get("/index", function(req, res) {
     res.render("index", {
         name: tabEvent[0].name,
         content: tabEvent[0].content
     });
 });
+
+// ####### Djaafar #######
+app.post("/user/add", function(req, res) {
+    console.log(req.body);
+    res.send(req.body);
+});
+
+// ####### Djaafar #######
+
 app.engine("html", function(path, options, callback) {
     fs.readFile(path, function(err, content) {
         if (err) {
