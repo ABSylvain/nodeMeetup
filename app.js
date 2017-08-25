@@ -38,16 +38,16 @@ app.get("/", function(req, res) {
 
 // ####### Djaafar #######
 
-//Crée un chemin
+//Create a path
 app.post("/user/add", function(req, res) {
     console.log(req.body);
     res.send(req.body);
 });
 
-//Charge adduser a ce chemin
+//load file adduser on the path.
 app.get("/user/add", function(req, res) {
     res.render("adduser");
-
+    //add tab value of form client.
     let tabUser = [{
         username: String,
         password: String
