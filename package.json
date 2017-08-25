@@ -19,6 +19,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
-    "mustache": "^2.3.0"
+    "mustache": "^2.3.0",
+    "mysql": "^2.14.1"
   }
 }

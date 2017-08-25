@@ -18,7 +18,7 @@ app.post("/event", function(req, res) {
     console.log(req.body);
     res.send(req.body);
 });
-app.get("/test", function(req, res) {
+app.get("/index", function(req, res) {
     res.render("index", {
         name: tabEvent[0].name,
         content: tabEvent[0].content
