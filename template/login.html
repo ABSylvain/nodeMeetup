@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2>Déjà inscrit ? connectez-vous !</h2>
+            <form id="login" method="POST" action="/user/login">
+                <label for="login" class="col-2 offset-5 text-center">Entrez votre id utilisateur</label>
+                <input type="text" id="login" name="login" placeholder="ex: Codicode" class="form-control col-4 mx-auto">
+                <label for="mdp-login" class="col-2 offset-5 text-center">Entrez votre mot de passe de connexion</label>
+                <input type="password" id="mdp-login" name="mdp-login" placeholder="******" class="form-control col-4 mx-auto" />
+                <input type="submit" id="btn" value="Valider" class="btn btn-primary col-2 offset-5">
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

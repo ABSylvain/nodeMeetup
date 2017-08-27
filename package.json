@@ -1,25 +1,25 @@
 {
-  "name": "nodemeetup",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ABSylvain/nodeMeetup.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ABSylvain/nodeMeetup/issues"
-  },
-  "homepage": "https://github.com/ABSylvain/nodeMeetup#readme",
-  "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.4",
-    "mustache": "^2.3.0",
-    "mysql": "^2.14.1"
-  }
+    "name": "nodemeetup",
+    "version": "20.1.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ABSylvain/nodeMeetup.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/ABSylvain/nodeMeetup/issues"
+    },
+    "homepage": "https://github.com/ABSylvain/nodeMeetup#readme",
+    "dependencies": {
+        "body-parser": "^1.17.2",
+        "express": "^4.15.4",
+        "mustache": "^2.3.0",
+        "mysql": "^2.14.1"
+    }
 }
